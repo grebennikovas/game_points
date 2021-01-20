@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lastpoints", "Lastpoints\Lastpoints.csproj", "{911DC4E5-B5A9-478B-9425-CF7E8CCA2A24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{911DC4E5-B5A9-478B-9425-CF7E8CCA2A24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{911DC4E5-B5A9-478B-9425-CF7E8CCA2A24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{911DC4E5-B5A9-478B-9425-CF7E8CCA2A24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{911DC4E5-B5A9-478B-9425-CF7E8CCA2A24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B64905DE-D656-4DBD-A7F1-3BD433C31A47}
+	EndGlobalSection
+EndGlobal

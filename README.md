@@ -32,10 +32,12 @@
 ## Интерфейс
 #### Начало партии:
 ![Alt-текст](https://raw.githubusercontent.com/grebennikovas/game_points/master/images/2.jpg "Начало партии")
+
 Первый ход за синими, размер поля - классический.
 #### Подсказка при наведении:
 ![Alt-текст](https://raw.githubusercontent.com/grebennikovas/game_points/master/images/4.jpg "Подсказка местоположения при нажатии")
-Первая иллюстрация - как подсказка выглядит. Вторая иллюстрация - зона, в которой активируется подсказка.
+
+На первой картинке показано, как выглядит подсказка при наведении. Вторая - зона её действия.
 #### Способы соединения точек в цепь:
 ![Alt-текст](https://raw.githubusercontent.com/grebennikovas/game_points/master/images/5.jpg "Цепи")
 

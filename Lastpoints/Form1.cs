@@ -278,7 +278,7 @@ namespace Lastpoints
             return DeadPointIs(true, x, y) || DeadPointIs(false, x, y) || AlivePointIs(true, x, y) || AlivePointIs(false, x, y);
         }
 
-        // Срабатывает при нажатии на игровое пле
+        // Срабатывает при нажатии на игровое поле//////////////////////////////////////////////////////////////////////////////////////////
         private void CreatePoint() 
         {
             Point mouse = PointUnderMouse(); // индексы позиции, находящейся под курсором
@@ -287,12 +287,12 @@ namespace Lastpoints
                 AddPoint(mouse.X, mouse.Y);          // добавляет точку соответствующего игрока
                 CheckPointsAround(mouse.X, mouse.Y); // проверяет, является ли эта точка последней в окружении
                 FindLap(mouse.X, mouse.Y, !Player);  // проверяет, поставлена ли эта точка внутрь окружения противника
-                LastPoint = new Point(mouse.X, mouse.Y);
+                LastPoint = new Point(mouse.X, mouse.Y); // сохраняет последнюю позицию
                 Step();                              // смена игрока, игровой ход
                 EndGame();                           // завершает игру, если на поле не осталось свободных мест
             }
         }
-        
+        // Дообавляет новую точку на поле соответствующему игроку
         private void AddPoint(int x, int y)
         {
             if (Player)
@@ -304,11 +304,15 @@ namespace Lastpoints
                 points[x, y] = 4;
             }
         }
+
+        // Шаг выполнен, необходимо сменить игрока
         private void Step()
         {
             Player = !Player;
-        } //смена шага
-        private bool AlivePointIs(bool whose, int x, int y) //показывает, есть ли живая точка игрока по координатам
+        }
+
+        //показывает, есть ли живая точка игрока по координатам
+        private bool AlivePointIs(bool whose, int x, int y) 
         {
             if (points[x, y] <= 0)
             {
@@ -331,7 +335,8 @@ namespace Lastpoints
                 }
             }
         }
-        private bool DeadPointIs(bool whose, int x, int y) //показывает, есть ли мертвая точка игрока по координатам
+        // показывает, есть ли мертвая точка игрока по координатам
+        private bool DeadPointIs(bool whose, int x, int y) 
         {
             if (points[x, y] >= -2)
             {
@@ -354,7 +359,8 @@ namespace Lastpoints
                 }
             }
         }
-        private void CheckPointsAround(int x, int y) // проверка точек вокруг точки с заданными координатами на наличие окружения 
+        // проверка точек вокруг точки с заданными координатами на наличие окружения 
+        private void CheckPointsAround(int x, int y) 
         {
             bool Killer = Player;
             if (x != 0)
@@ -390,7 +396,8 @@ namespace Lastpoints
                 FindLap(x, y + 1, Killer);
             }
         }
-        private void FindLap(int x, int y, bool Killer) //проверяет, является ли эта точка частью убитой зоны
+        // проверяет, является ли эта точка частью убитой зоны
+        private void FindLap(int x, int y, bool Killer) 
         {
             bool isLap = true;
             bool[,] victims = new bool[FieldSizeOfPointsX, FieldSizeOfPointsY]; // массив с проверенными позициями
@@ -466,6 +473,7 @@ namespace Lastpoints
                 }
             }
         }
+        // Обновляет строку с информацией
         private void RefreshLabel()
         {
             string pl;
@@ -478,8 +486,9 @@ namespace Lastpoints
                 pl = "синих";
             }
             InfoLabel.Text = points0 + ":" + points1 + "   |   " + "Ход " + pl;
-        } // Обновляет строку с информацией
-        public static void SetStart() // ставит начальные точки
+        } 
+         // ставит начальные точки
+        public static void SetStart()
         {
             points[FieldSizeOfPointsX / 2 - 1, FieldSizeOfPointsY / 2 - 1] = 3;
             points[FieldSizeOfPointsX / 2, FieldSizeOfPointsY / 2 - 1] = 4;
@@ -487,7 +496,8 @@ namespace Lastpoints
             points[FieldSizeOfPointsX / 2, FieldSizeOfPointsY / 2] = 3;
             Player = false;
         }
-        private bool isEnd() // возвращает true, если на поле не осталось свободных точек
+        // возвращает true, если на поле не осталось свободных точек
+        private bool isEnd() 
         {
             for (int y = 0; y < FieldSizeOfPointsY; y++)
             {
@@ -501,7 +511,8 @@ namespace Lastpoints
             }
             return true;
         }
-        private void EndGame() // завершает игру, если на поле не осталось свободных мест
+        // завершает игру, если на поле не осталось свободных мест
+        private void EndGame()
         {
             if (isEnd())
             {

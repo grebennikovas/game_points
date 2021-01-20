@@ -31,8 +31,6 @@
 ## Интерфейс
 #### Начало партии:
 ![Alt-текст](https://raw.githubusercontent.com/grebennikovas/game_points/master/images/2.jpg "Начало партии")
-
-Первый ход за синими, размер поля - классический.
 #### Подсказка при наведении:
 ![Alt-текст](https://raw.githubusercontent.com/grebennikovas/game_points/master/images/4.jpg "Подсказка местоположения при нажатии")
 

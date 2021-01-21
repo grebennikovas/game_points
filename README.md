@@ -30,7 +30,7 @@
 
 ## Интерфейс
 #### Начало партии:
-![Alt-текст](https://raw.githubusercontent.com/grebennikovas/game_points/master/images/2.jpg "Начало партии")
+![Alt-текст](https://raw.githubusercontent.com/grebennikovas/game_points/master/images/2_2.jpg "Начало партии")
 #### Подсказка при наведении:
 ![Alt-текст](https://raw.githubusercontent.com/grebennikovas/game_points/master/images/4.jpg "Подсказка местоположения при нажатии")
 
